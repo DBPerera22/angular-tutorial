@@ -8,9 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-tutorial';
 
-  emailValue: string = '';
-
-  takeInput(event: any) {
-    console.log(event.target.value);
-  }
+  emailValue: String = '';
 }

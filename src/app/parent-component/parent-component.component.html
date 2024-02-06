@@ -1,0 +1,20 @@
+<div class="p-2 d-flex justify-content-center">
+  <h1>Code Insight - Parent Comonent</h1>
+</div>
+
+<!-- Input -->
+<app-child-component [childMessage]="messageFromParent"></app-child-component>
+
+<div class="p-2 d-flex justify-content-center">
+  <p>Message from Child Component: {{ messageFromParent }}</p>
+</div>
+
+<!-- output -->
+<app-child-component (messageEvent)="receiveMessage($event)"></app-child-component>
+    <p>{{ messageFromChild }}</p>
+
+    <button (click)="getData()">Get Data from API</button>
+    <div *ngIf="data">
+      <h2>Data from API:</h2>
+      <pre>{{ data | json }}</pre>
+    </div>
